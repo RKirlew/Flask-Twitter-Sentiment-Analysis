@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twendz Result</title>
+</head>
+{%block body %}
+<body>
+	<style>
+	a{text-decoration: none;}
+</style>
+	<center>
+<div class=" well text-center" style="color:#34ebe1;">
+			<h2 style="font-family: Helvetica"> Twendz Homepage</h2>
+			<br><br>
+			
+		</div></center>
+
+<center><a href="../"><img src="http://pngimg.com/uploads/twitter/twitter_PNG9.png" width="100" height="100"></a></center>
+<center>
+    
+
+<div id="piechart"></div>
+
+<script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+  </head>
+  <body>
+    <div id="container" style="width: 100%; height: 100%"></div>
+    <script>
+      anychart.onDocumentReady(function() {
+ 
+        // set the data
+        var data = {
+            header: ["", ""],
+            rows: [
+              ["Positive", {{pNum}}],
+              ["Negative", {{nNum}}],
+              ["Neutral",{{neNum}}]
+              
+             
+        ]};
+ 
+        // create the chart
+        var chart = anychart.bar();
+ 
+        // add the data
+        chart.data(data);
+ 
+        // set the chart title
+        chart.title("Sentiment tweet analysis for {{iSearch}}");
+ 
+        // draw
+        chart.container("container");
+        chart.draw();
+      });
+    </script>
+</center>
+
+<a href="#positive" class="btn btn-success"><h3 style="color:#348feb;">Positive tweets:{{pNum}}</h3></a>
+<a href="#neutral"><h3 style="color:#348feb;">Neutral tweets:{{neNum}}</h3></a>
+<a href="#negative"><h3 style="color:#348feb;">Negative tweets:{{nNum}}</h3></a>
+
+<div id="positive">
+{%for row in results %}
+<h3 style="color:#34ebe1; font-family:Arial Light;"> &#128512;->{{row}}</h3>
+<br>
+</div>
+{%endfor%}
+<div id="negative">
+{%for row in resultsN %}
+<h3 style="color:#34ebe1; font-family:Arial Light;"> &#128530;->{{row}}</h3>
+<br>
+</div>
+{%endfor%}
+<div id="neutral">
+{%for row in resultsNe %}
+<h3 style="color:#34ebe1; font-family:Arial Light;">  &#128528;->{{row}}</h3>
+<br>
+</div>
+{%endfor%}
+{%endblock%}
+
+
+</body>
+</html>
