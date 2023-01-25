@@ -19,7 +19,7 @@ botocore==1.19.63
 boxing==0.1.4
 bs4==0.0.1
 cachetools==4.2.2
-certifi==2021.5.30
+certifi==2022.12.7
 cffi==1.14.6
 chardet==4.0.0
 charset-normalizer==2.0.2
