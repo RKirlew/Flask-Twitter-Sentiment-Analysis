@@ -219,7 +219,7 @@ threadpoolctl==2.2.0
 tinydb==4.5.2
 tokenizers==0.12.1
 tomli==2.0.1
-torch==1.11.0
+torch==1.13.1
 torchfile==0.1.0
 tornado==6.1
 tqdm==4.61.2
