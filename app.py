@@ -31,6 +31,7 @@ def search():
 	nTweets=[]
 	neTweets=[]
 	neutral_ratio=0
+	sakdk=0
 	if request.method=="POST":
 		consumer_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 		consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
