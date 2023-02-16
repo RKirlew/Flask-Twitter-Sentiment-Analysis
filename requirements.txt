@@ -238,7 +238,7 @@ user-agents==2.2.0
 virtualenv==20.4.7
 visdom==0.1.8.9
 websocket-client==1.1.0
-Werkzeug==2.0.1
+Werkzeug==2.2.3
 WMI==1.5.1
 wrapt==1.12.1
 xmljson==0.2.0
