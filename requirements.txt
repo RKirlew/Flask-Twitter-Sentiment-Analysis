@@ -206,7 +206,7 @@ sortedcontainers==2.4.0
 sounddevice==0.4.2
 SoundFile==0.10.3.post1
 soupsieve==2.3.2.post1
-sqlparse==0.4.2
+sqlparse==0.4.4
 stripe==2.60.0
 tensorboard==2.5.0
 tensorboard-data-server==0.6.1
